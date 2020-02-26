@@ -56,6 +56,10 @@ class App extends Component{
     }
     // 데이터 읽기
     componentDidMount() {
+        axios.get("http://localhost:3000/music.json")
+            .then((response)=>{
+                this.setState({music:response.data})
+            })
     }
     // 화면 출력
     render() {
@@ -65,7 +69,8 @@ class App extends Component{
                 <div className={"row"}>
                     <SearchBar/>
                     <div style={{"height":"30px"}}></div>
-                    <MusicTable/>
+                    {/* table에 music변수를 전송 , ss값을 전송*/}
+                    <MusicTable music={this.state.music} ss={this.state.ss}/>
                 </div>
             </React.Fragment>
 
@@ -75,6 +80,14 @@ class App extends Component{
 }
 class MusicTable extends Component{
    render() {
+       var rows=[];
+       this.props.music.map((m)=>{
+           if(m.title.indexOf(this.props.ss)===-1)
+           {
+               return;
+           }
+           rows.push(<MusicRow music={m}/>)
+       })
       return (
           <table className={"table table-hover"}>
               <thead>
@@ -85,12 +98,24 @@ class MusicTable extends Component{
                     <th>가수명</th>
                 </tr>
               </thead>
+              <tbody>
+              {rows}
+              </tbody>
           </table>
       )
    }
 }
 class MusicRow extends Component{
-
+   render() {
+       return (
+           <tr>
+               <td>{this.props.music.rank}</td>
+               <td><img src={this.props.music.poster} width={"30"} height={"30"}/></td>
+               <td>{this.props.music.title}</td>
+               <td>{this.props.music.singer}</td>
+           </tr>
+       )
+   }
 }
 class SearchBar extends Component{
    render() {
