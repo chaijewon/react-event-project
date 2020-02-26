@@ -54,16 +54,54 @@ class App extends Component{
             ss:''
         }
     }
+    // 데이터 읽기
+    componentDidMount() {
+    }
+    // 화면 출력
+    render() {
+        return (
+            <React.Fragment>
+                <h1>Music Top50</h1>
+                <div className={"row"}>
+                    <SearchBar/>
+                    <div style={{"height":"30px"}}></div>
+                    <MusicTable/>
+                </div>
+            </React.Fragment>
+
+        )
+    }
 
 }
 class MusicTable extends Component{
-
+   render() {
+      return (
+          <table className={"table table-hover"}>
+              <thead>
+                <tr className={"danger"}>
+                    <th>순위</th>
+                    <th></th>
+                    <th>곡명</th>
+                    <th>가수명</th>
+                </tr>
+              </thead>
+          </table>
+      )
+   }
 }
 class MusicRow extends Component{
 
 }
 class SearchBar extends Component{
-
+   render() {
+       return (
+           <form>
+               <input type={"text"} className={"input-sm"}
+                      size={"20"}
+                      placeholder={"Search Input"}/>
+           </form>
+       )
+   }
 }
 
 export default App;

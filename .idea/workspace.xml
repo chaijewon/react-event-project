@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="735fe70b-aabc-41ec-87f9-f391121382a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/music.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,14 +61,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582676300214</updated>
-      <workItem from="1582676302115" duration="2460000" />
+      <workItem from="1582676302115" duration="3181000" />
     </task>
+    <task id="LOCAL-00001" summary="commit1">
+      <created>1582678784002</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582678784002</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit1" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit1" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="272" y="0" key="CommitChangelistDialog2" timestamp="1582678782633">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="272" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582678782633" />
     <state x="494" y="235" key="Github.ShareDialog" timestamp="1582678759739">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -95,5 +105,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582676829325" />
+    <state x="232" y="75" key="Vcs.Push.Dialog.v2" timestamp="1582678788722">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="232" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1582678788722" />
   </component>
 </project>
