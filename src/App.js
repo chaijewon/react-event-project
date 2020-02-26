@@ -53,6 +53,11 @@ class App extends Component{
             music:[],
             ss:''
         }
+        // 이벤트 등록
+        this.handlerUserInput=this.handlerUserInput.bind(this);
+    }
+    handlerUserInput(ss) {
+        this.setState({ss:ss})
     }
     // 데이터 읽기
     componentDidMount() {
@@ -61,13 +66,13 @@ class App extends Component{
                 this.setState({music:response.data})
             })
     }
-    // 화면 출력
+    // 화면 출력 => Props => 1) 데이터값, 2) 이벤트 전송
     render() {
         return (
             <React.Fragment>
                 <h1>Music Top50</h1>
                 <div className={"row"}>
-                    <SearchBar/>
+                    <SearchBar onUserInput={this.handlerUserInput}/>
                     <div style={{"height":"30px"}}></div>
                     {/* table에 music변수를 전송 , ss값을 전송*/}
                     <MusicTable music={this.state.music} ss={this.state.ss}/>
@@ -118,12 +123,22 @@ class MusicRow extends Component{
    }
 }
 class SearchBar extends Component{
+    constructor(props) {
+        super(props);
+        this.handlerChange=this.handlerChange.bind(this);
+    }
+    handlerChange(e)
+    {
+        this.props.onUserInput(e.target.value)
+    }
    render() {
        return (
            <form>
                <input type={"text"} className={"input-sm"}
                       size={"20"}
-                      placeholder={"Search Input"}/>
+                      placeholder={"Search Input"}
+                      onChange={this.handlerChange}
+               />
            </form>
        )
    }
